@@ -1,0 +1,38 @@
+/*
+ * Gradle settings, including the QuPath version to use with scripts.
+ */
+
+rootProject.name = 'qupath-scripts'
+
+// Define the QuPath version to use
+gradle.ext.qupathVersion = "0.4.3"
+
+dependencyResolutionManagement {
+
+    repositories {
+
+        // Use Maven Central for dependencies
+        mavenCentral()
+
+        // Use SciJava releases for current QuPath jars
+        maven {
+            name "SciJava releases"
+            url "https://maven.scijava.org/content/repositories/releases"
+        }
+
+        // Use SciJava snapshots if necessary
+        maven {
+            name "SciJava snapshots"
+            url "https://maven.scijava.org/content/repositories/snapshots"
+        }
+
+    }
+
+    // Access the QuPath version catelog so that extra dependencies
+    // can be added, using the same versions as for QuPath itself
+    versionCatalogs {
+        libs {
+            from("io.github.qupath:qupath-catalog:${gradle.ext.qupathVersion}")
+        }
+    }
+}

@@ -1,0 +1,25 @@
+plugins {
+    // Apply the groovy Plugin to add support for Groovy
+    id 'groovy'
+    // To manage included native libraries, limiting to the current platform
+    // JavaCPP v1.5.8 (with QuPath v0.4.x) does not support Gradle 7.6+
+    alias(libs.plugins.javacpp)
+}
+
+dependencies {
+    // Get QuPath GUI & core (version declared in settings.gradle)
+    implementation "io.github.qupath:qupath-gui-fx:${gradle.ext.qupathVersion}"
+
+    // Get SLF4J and Groovy, using the versions associated with QuPath
+    implementation libs.bundles.logging
+    implementation libs.bundles.groovy
+}
+
+// We aren't structuring things 'properly' because we just want a flat directory of scripts
+sourceSets {
+    main {
+        groovy {
+            srcDirs = ['scripts/']
+        }
+    }
+}
