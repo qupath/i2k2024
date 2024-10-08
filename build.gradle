@@ -26,12 +26,6 @@ sourceSets {
     }
 }
 
-compileGroovy {
-println source.getFiles()
-
-}
-
-
 /*
  * Ensure Java compatibility matches QuPath, and include sources and javadocs if building jars.
  */
