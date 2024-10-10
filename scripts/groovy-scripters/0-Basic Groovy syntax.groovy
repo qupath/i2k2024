@@ -1,3 +1,8 @@
+/*
+This file contains some information regarding the Groovy syntax
+*/
+
+
 // Use 'def' to declare variables:
 def someVariable = "Some value"
 
@@ -13,6 +18,9 @@ def someList = []
 // Use 'add' or 'addAll' to add elements to a list:
 someList.add("someElement1")
 someList.addAll("someElement2", "someElement3")
+
+// Use '[i]' to access the ith element of a list:
+println someList[1]
 
 // Use 'each' to iterate over a list:
 someList.each { element -> 
@@ -30,6 +38,12 @@ def someListUpperCased = someList.collect { element ->
     element.toUpperCase()
 }
 println someListUpperCased    // will print [SOMEELEMENT1, SOMEELEMENT2, SOMEELEMENT3]
+
+// Use '[:]' to create an empty map
+def someMap = [:]
+
+// Use '[""]' to access or create an element of a map
+map["someKey"] = "Some value"
 
 // Use the safe navigation operator '?.' instead of checking for null objects:
 if (getProject() != null && getProject().getEntry(getCurrentImageData()) != null && getProject().getEntry(getCurrentImageData()).getImageName() == "some name") {}
