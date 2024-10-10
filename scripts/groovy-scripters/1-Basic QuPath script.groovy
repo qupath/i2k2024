@@ -1,5 +1,5 @@
 /*
-This script add a new measurement to every detection of the current image.
+This script adds a new measurement to every detection of the current image.
 */
 
 

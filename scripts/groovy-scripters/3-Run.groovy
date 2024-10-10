@@ -1,6 +1,6 @@
 /*
 This script loops over each image of the current project, and for each
-image create an annotation covering the entire image and apply
+image, create an annotation covering the entire image and apply
 a cell detection algorithm.
 
 It is intended to be run by calling "Run". When that's the case,
