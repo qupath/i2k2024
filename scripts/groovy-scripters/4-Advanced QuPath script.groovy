@@ -9,8 +9,11 @@ It can be used by clicking on "Run" or "Run for project".
 import qupath.lib.images.writers.ome.zarr.OMEZarrWriter
 
 
-// Define the output path
-var outputPath = buildPathInProject(getCurrentImageName() + ".ome.zarr")
+// Define a folder containing all export images within the project directory
+var containingFolderPath = buildPathInProject("export")
+
+// Create the output path of the image
+var outputPath = containingFolderPath + "/" + getCurrentImageName() + ".ome.zarr"
 
 // Get current image server
 var currentImageServer = getCurrentServer()
