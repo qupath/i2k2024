@@ -10,18 +10,18 @@ by calling "Run for project".
 
 
 // Get current project
-def project = getProject()
+var project = getProject()
 
 // Get images of the project
-def imageEntries = project.getImageList()
+var imageEntries = project.getImageList()
 
 // Iterate over image entries
 imageEntries.each { imageEntry ->
     // Get image data of image entry
-    def imageData = imageEntry.readImageData()
+    var imageData = imageEntry.readImageData()
 
     // Create an annotation covering the entire PROVIDED image data, and select it
-    createAllFullImageAnnotations(imageData, true)
+    createFullImageAnnotation(imageData, true)
 
     // Apply the cell detection algorithm to the PROVIDED image on the selected annotation
     runPlugin(

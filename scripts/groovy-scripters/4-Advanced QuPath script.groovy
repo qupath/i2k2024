@@ -10,16 +10,16 @@ import qupath.lib.images.writers.ome.zarr.OMEZarrWriter
 
 
 // Define the output path
-def outputPath = "/home/leo/" + getCurrentImageName() + ".ome.zarr"
+var outputPath = buildPathInProject(getCurrentImageName() + ".ome.zarr")
 
 // Get current image server
-def currentImageServer = getCurrentServer()
+var currentImageServer = getCurrentServer()
 
 // Create Zarr builder
-def builder = new OMEZarrWriter.Builder(currentImageServer, outputPath)
+var builder = new OMEZarrWriter.Builder(currentImageServer, outputPath)
 
 // Build the Zarr builder. This creates a Zarr writer
-def writer = builder.build()
+var writer = builder.build()
 
 // Use the writer to write the image
 writer.writeImage()

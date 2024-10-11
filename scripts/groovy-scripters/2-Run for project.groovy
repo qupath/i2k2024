@@ -11,7 +11,7 @@ current image.
 
 
 // Create an annotation covering the entire CURRENT image, and select it
-createAllFullImageAnnotations(true)
+createFullImageAnnotation(true)
 
 // Apply the cell detection algorithm to the CURRENT image on the selected annotation
 runPlugin(
