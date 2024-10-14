@@ -11,6 +11,9 @@ println(someVariable)
 println someVariable    // parentheses are optional
 println "Some other value"
 
+// Any Groovy expression can be interpolated in all string literals:
+println "The value of someVariable is ${someVariable}"
+
 // Semi-columns are optional
 
 // Use '[]' to create a list:
