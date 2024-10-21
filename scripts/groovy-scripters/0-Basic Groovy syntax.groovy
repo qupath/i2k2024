@@ -43,7 +43,7 @@ println elementsEndingWith1    // will print [someElement1]
 var someListUpperCased = someList.collect { element ->
     element.toUpperCase()
 }
-println someListUpperCased    // will print [SOMEELEMENT1, SOMEELEMENT2, SOMEELEMENT3]
+println someListUpperCased    // will print [SOMEELEMENT0, SOMEELEMENT1, SOMEELEMENT2, SOMEELEMENT3]
 
 // Use '[:]' to create an empty map
 var someMap = [:]
