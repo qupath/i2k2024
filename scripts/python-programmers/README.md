@@ -1,1 +1,0 @@
-## QuPath for Python Programmers
