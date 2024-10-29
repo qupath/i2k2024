@@ -21,7 +21,7 @@ dependencies {
 sourceSets {
     main {
         groovy {
-            srcDirs = ['scripts']
+            srcDirs = ['workshops']
         }
     }
 }
