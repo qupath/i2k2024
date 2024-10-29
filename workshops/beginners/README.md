@@ -56,7 +56,7 @@ The measurements can either be exported from the [measurement table](https://qup
 ## What if...
 
 ### The cell detection isn't good enough?
-Instanseg! Try some pre-trained segmentation models by following the instructions [here](https://github.com/qupath/qupath-extension-instanseg). Note: the instanseg extension is included in v0.6.0-rc3 so no need to use the extension manager or drag and drop the jar. 
+InstanSeg! Try some pre-trained segmentation models by following the instructions [here](https://github.com/qupath/qupath-extension-instanseg). Note: the InstanSeg extension is included in v0.6.0-rc3 so no need to use the extension manager or drag and drop the jar. 
 
 ### Many images needing the same analysis?
 Save yourself some time and use a script (don't let it scare you!). You don't have to know programming to script as QuPath tracks your workflow and then generates the script for you. More on generating a script can be found [here](https://qupath.readthedocs.io/en/latest/docs/scripting/workflows_to_scripts.html).
